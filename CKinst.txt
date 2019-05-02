@@ -1,0 +1,17 @@
+ESP:
+
+    CreationKit.exe -GeneratePrecombined:<esm> filtered all
+    CreationKit.exe -CheckinPlugin:<CombinedObjects.esp> <esm> (or manually copy)
+    CreationKit.exe -GeneratePreVisData:<esm> filtered all
+    CreationKit.exe -CheckinPlugin:<PreVis.esp> <esm> (or manually copy)
+    Load and Save in CK once, and archive the generated files for Precomb/Previs
+
+Base game ESM:
+
+    CreationKit.exe -GeneratePrecombined:<esm> clean all
+    CreationKit.exe -CheckinPlugin:<CombinedObjects.esp> <esm>
+    CreationKit.exe -CompressPSG:<esm>
+    CreationKit.exe -BuildCDX:<esm>
+    CreationKit.exe -GeneratePreVisData:<esm> clean all
+    CreationKit.exe -CheckinPlugin:<PreVis.esp> <esm>
+    Unsure how the hell to do that, probably requires some scripting.
